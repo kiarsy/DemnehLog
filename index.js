@@ -1,9 +1,9 @@
-var Logger = require('./MainLogger.js');
+var Logger = require('./Logger.js');
 //Providers
-require('./Providers/General.js');
-var TelnetProviderClass = new require('./Providers/Telnet.js');
-var MongoProviderClass = new require('./Providers/Mongo.js');
-var ConsoleProviderClass = new require('./Providers/Console.js');
+// require('./Providers/General.js');
+var TelnetProviderClass = Logger.TelnetProviderClass;
+var MongoProviderClass = Logger.MongoProviderClass;
+var ConsoleProviderClass = Logger.ConsoleProviderClass;
 
 
 var TelnetProvider = new TelnetProviderClass();

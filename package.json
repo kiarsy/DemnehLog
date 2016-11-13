@@ -1,21 +1,22 @@
 {
-  "name": "mainlogger",
-  "version": "0.0.1",
-  "description": "a log framework, with mongoDb,console,telnet client",
-  "main": "MainLogger.js",
+  "name": "demnehlog",
+  "version": "0.0.3",
+  "description": "a log framework, with mongoDb,colored console log,telnet client",
+  "main": "Logger.js",
   "scripts": {
     "test": "test"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kiarsy/MainLogger.git"
-  },
+  
   "dependencies": {
     "mongoose": "4.x"
   },
   "keywords": [
     "log",
-    "mainlogger",
+    "Demneh",
+    "DemnehLog",
+    "DemnehLogger",
+    "colored",
+    "colored console log",
     "telnet",
     "Client",
     "telnet",

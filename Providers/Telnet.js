@@ -1,6 +1,6 @@
 
 //TELNET
-var TelnetLogger = function () {
+var TelnetLogger = function (options) {
 
     function processInput(socket, text) {
         text = text.replace(EOL, '');
@@ -176,10 +176,8 @@ var TelnetLogger = function () {
 
     });
 
-    var serverPort = 5050;
-
-    serverSocket.listen(serverPort, function () {
-        console.log('server is listening on port :' + serverPort);
+    serverSocket.listen(options.port, function () {
+        console.log('Telnet is listening on port :' + options.port);
     });
 
 };
