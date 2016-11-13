@@ -6,6 +6,13 @@
   "scripts": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiarsy/MainLogger.git"
+  },
+  "dependencies": {
+    "mongoose": "4.x"
+  },
   "keywords": [
     "log",
     "mainlogger",
@@ -16,5 +23,5 @@
     "telnet"
   ],
   "author": "Hosein Kiarsy Pour",
-  "license": "ISC"
+  "license": " MS-PL"
 }
