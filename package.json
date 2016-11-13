@@ -1,0 +1,20 @@
+{
+  "name": "mainlogger",
+  "version": "0.0.1",
+  "description": "a log framework, with mongoDb,console,telnet client",
+  "main": "MainLogger.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "log",
+    "mainlogger",
+    "telnet",
+    "Client",
+    "telnet",
+    "log",
+    "telnet"
+  ],
+  "author": "Hosein Kiarsy Pour",
+  "license": "ISC"
+}
