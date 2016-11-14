@@ -140,7 +140,7 @@ var TelnetLogger = function (options) {
 
         socket.write(Clean);
         socket.write(BgYellow + '-----LOGGER CONSOLE-----' + Reset + EOL);
-        socket.write(BgYellow + 'Version : 0.0.1         ' + Reset + EOL);
+        socket.write(BgYellow + 'Version : 0.0.5         ' + Reset + EOL);
         socket.write(EOL);
         socket.write(FgCyan + 'Please enter username: ' + Reset);
 
