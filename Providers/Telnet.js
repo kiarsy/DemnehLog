@@ -211,7 +211,6 @@ TelnetLogger.prototype.log = function (obj) {
             if (val1.indexOf(':') > 0) {
                 var queryKey = val1.split(':')[0].toLowerCase();
                 var val1 = val1.split(':')[1].toLowerCase();
-
                 if (queryKey == 'text') {
                     if (obj.text.toLowerCase().indexOf(val1) >= 0) {
                         return true;
@@ -219,18 +218,22 @@ TelnetLogger.prototype.log = function (obj) {
                 }
             }
 
+            val1 = socket.query[key].toLowerCase()
+            // console.log('obj.extras:', obj.extras);
             //extras check
             for (varKey in obj.extras) {
 
                 if (val1.indexOf(':') == -1) {
+                    // console.log('val1:', val1);
                     continue; //its not a key-value pair
                 }
 
                 var queryKey = val1.split(':')[0];
                 var val1 = val1.split(':')[1];
 
-                var val2 = obj.extras[varKey]
 
+                var val2 = obj.extras[varKey]
+                // console.log('queryKey:', queryKey, ',val1:', val1, ',varKey:', varKey, ',val2:' + val2);
                 if (typeof val1 == 'string' && typeof val2 == 'string') {
                     val1 = val1.toLowerCase();
                     val2 = val2.toLowerCase();
