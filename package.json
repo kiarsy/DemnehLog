@@ -1,6 +1,6 @@
 {
   "name": "demnehlog",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a log framework, with mongoDb,colored console log,telnet client",
   "main": "Logger.js",
   "scripts": {

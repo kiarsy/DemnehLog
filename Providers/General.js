@@ -23,7 +23,7 @@ BgWhite = "\x1b[47m"
 
 EOL = '\r\n';
 
-formatedLogText = function (obj) {
+formatedLogText = function (obj, format) {
 
 
     var TypeTitle = '';
@@ -38,22 +38,58 @@ formatedLogText = function (obj) {
     }
 
     if (type == 'error') {
-        TypeTitle = Reset + Bright + FgRed + 'ERROR  ' + Reset + FgRed;
+        TypeTitle = Reset + Bright + FgRed + 'Error  ' + Reset + FgRed;
     }
     else if (type == 'warning') {
-        TypeTitle = Reset + FgMagenta + 'WARING ';
+        TypeTitle = Reset + FgYellow + 'Warning';
     }
     else if (type == 'debug') {
-        TypeTitle = Reset + FgCyan + 'DEBUG  ';
+        TypeTitle = Reset + FgCyan + 'Debug  ';
     }
     else if (type == 'fatal') {
         TypeTitle = Reset + BgRed + Blink + 'FATAL  ' + Reset + BgRed;
     }
     else if (type == 'info') {
-        TypeTitle = Reset + 'INFO   ';
+        TypeTitle = Reset + 'Info   ';
     }
 
-    return BgBlue + tag + ':' + Reset + '(' + date + ') ' + TypeTitle + text + Reset;
+    var hasTAG = false;
+    var hasDate = false;
+    var hasTITLE = false;
+    var hasTEXT = false;
+
+    if (format.indexOf('tag') > -1) {
+        hasTAG = true;
+    }
+
+    if (format.indexOf('date') > -1) {
+        hasDate = true;
+    }
+
+    if (format.indexOf('title') > -1) {
+        hasTITLE = true;
+    }
+
+    if (format.indexOf('text') > -1) {
+        hasTEXT = true;
+    }
+
+    var outputText = '';
+
+    if (hasTAG) {
+        outputText = outputText + FgGreen + tag + ':' + Reset;
+    }
+    if (hasDate) {
+        outputText = outputText + '(' + date + ') ';
+    }
+    if (hasTITLE) {
+        outputText = outputText + TypeTitle + '  |   ';
+    }
+    if (hasTEXT) {
+        outputText = outputText + text + Reset;
+    }
+
+    return outputText;
 }
 
 

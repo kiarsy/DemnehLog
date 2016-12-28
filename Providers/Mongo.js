@@ -1,43 +1,38 @@
 //MONGOOOOOO
-var mongoose = require('mongoose');
 
+var MongoLogger = function (configs) {
 
-var mongodbCon = mongoose.connection;
+    var mongoose = require('mongoose');
+    var mongodbCon = mongoose.connection;
+    mongodbCon.on('error', console.error.bind(console, 'LOGGER connection error:'));
 
-mongodbCon.on('error', console.error.bind(console, 'LOGGER connection error:'));
+    mongodbCon.once('open', function (callback) {
+        console.log('MongoDB LOGGER is Connected');
+    });
 
-mongodbCon.once('open', function(callback) {
-    console.log('MongoDB LOGGER is Connected');
-});
+    mongodbCon.on('disconnected', function () {
+        console.log('Mongoose LOGGER default connection disconnected');
+    });
 
-mongodbCon.on('disconnected', function() {
-    console.log('Mongoose LOGGER default connection disconnected');
-});
+    var LoggerSchema = mongoose.Schema({
+        date: Number,
+        type: String,
+        tag: String,
+        text: String,
+        extras: String
+    });
 
-var LoggerSchema = mongoose.Schema({
-    date: Number,
-    type: String,
-    tag: String,
-    text: String,
-    extras: String
-});
+    LoggerSchema.index({
+        date: 1
+    });
 
-LoggerSchema.index({
-    date: 1
-});
-
-LoggerModel = mongoose.model('Logger', LoggerSchema);
-
-var MongoLogger = function(configs) {
-
+    this.LoggerModel = mongoose.model('Logger', LoggerSchema);
+    
     mongoose.connect(configs.mongodb.address);
-
-
-
 
 };
 
-MongoLogger.prototype.log = function(obj) {
+MongoLogger.prototype.log = function (obj,format) {
 
     var type = obj.type;
     var text = obj.text;
@@ -46,7 +41,7 @@ MongoLogger.prototype.log = function(obj) {
 
 
 
-    var logModel = new LoggerModel();
+    var logModel = new this.LoggerModel();
     logModel.date = obj.timeStamp;
     logModel.type = obj.type;
     logModel.tag = obj.tag;
@@ -54,7 +49,7 @@ MongoLogger.prototype.log = function(obj) {
     logModel.extras = JSON.stringify(obj.extras)
 
 
-    logModel.save(function(err, result) {
+    logModel.save(function (err, result) {
         if (err)
             console.log('error save log :', err);
     });

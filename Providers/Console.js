@@ -1,8 +1,8 @@
 //CONSOLE
 var ConsoleLogger = function () { };
 
-ConsoleLogger.prototype.log = function (obj) {
-    console.log(formatedLogText(obj));
+ConsoleLogger.prototype.log = function (obj,format) {
+    console.log(formatedLogText(obj,format));
 }
 
 

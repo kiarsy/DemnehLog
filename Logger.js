@@ -3,23 +3,19 @@ require('./Providers/General.js');
 var MainLogger = function () {
 };
 
-
-
-
-
-
-var AbstractLogger = function (providers) {
+var AbstractLogger = function (providers,format) {
 
     this.providers = providers;
+ this.providers = providers;
 
     this.send = function (obj) {
-
+        index = 0;
         this.providers.forEach(function (item) {
-
-            item.log(obj);
+            item.log(obj,format[index]);
+            index++;
         });
-
     }
+
 }
 
 AbstractLogger.prototype.log = function (type, text, tags, extras) {
