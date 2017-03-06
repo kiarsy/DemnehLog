@@ -7,11 +7,11 @@
 
 - [Install](#install)
 - [Introduction](#introduction)
-- [Classes](#Classes)
-- [ProviderConsole](#ProviderConsole)
-- [ProviderMongo](#ProviderMongo)
-- [ProviderTelnet](#ProviderTelnet)
-- [Full Example](#FullExample)
+- [Classes](#classes)
+- [ProviderConsole](#providerconsole)
+- [ProviderMongo](#providermongo)
+- [ProviderTelnet](#providertelnet)
+- [Full Example](#full-example)
 
 ## Install
 
