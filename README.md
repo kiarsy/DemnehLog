@@ -42,7 +42,7 @@ logger.warning('tag', 'this is a warning');
 `Logger` class used to make an object of logger with one or multiple providers.
 you can initilize multiple `Logger` for diffrent porpuse.In this sample we make a object of `Logger` as 'testlogger' with a console provider that show all logs on console screen with 'date,title,text' format, the output is : 
 
-![alt tag](https://raw.githubusercontent.com/kiarsy/MainLogger/master/example1.png)
+![alt tag](https://raw.githubusercontent.com/kiarsy/MainLogger/master/example_output1.png)
 
 ## Classes
 
