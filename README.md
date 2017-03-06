@@ -7,8 +7,11 @@
 
 - [Install](#install)
 - [Introduction](#introduction)
-- [Contributors](#contributors)
-- [Todo](#todo)
+- [Classes](#Classes)
+- [ProviderConsole](#ProviderConsole)
+- [ProviderMongo](#ProviderMongo)
+- [ProviderTelnet](#ProviderTelnet)
+- [Full Example](#FullExample)
 
 ## Install
 
@@ -67,9 +70,18 @@ DATE----            TITLE---        TEXT---
 var testlogger = new DemnehLog.Logger([consoleProvider], ['title,text']);
 ```
 ![alt tag](https://raw.githubusercontent.com/kiarsy/MainLogger/master/example_output2.png)
+## ProviderConsole
+comming soon.
 
-Note: The query values are first attempted to be parsed as JSON, and if that
-fails assumed to be plaintext strings.
+## ProviderMongo
+comming soon.
+
+## ProviderTelnet
+comming soon.
+
+## Full Example
+comming soon.
+
 
 [npm-image]: https://img.shields.io/npm/v/demnehlog.svg
 [npm-url]: https://www.npmjs.com/package/demnehlog
