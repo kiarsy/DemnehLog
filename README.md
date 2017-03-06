@@ -51,7 +51,7 @@ demnehlog has 2 parts as describe below:
 * `Providers`: Providers are the way that you choose to store or show your logs,For instance by `ProviderMongo` provider you can store your logs in mongoDb permanently, in this version we have 3 providers :
 </br>`ProviderConsole` Shows all logs on console screen.
 </br>`ProviderMongo` Stores logs in mongoDb Database.
-</br>`ProviderTelnet` Sends logs immdiatly to telnet clients that already connected.
+</br>`ProviderTelnet` Sends logs immediately to telnet clients that already connected.
 
 * `Logger`: instance of Logger is a compination or diffrent providers you choose and the log format that the provider must provide.For instance in above example : 
 ```js
