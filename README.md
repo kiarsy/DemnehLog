@@ -12,6 +12,7 @@
 - [ProviderMongo](#providermongo)
 - [ProviderTelnet](#providertelnet)
 - [Full Example](#full-example)
+- [Feedback](#feedback)
 
 ## Install
 
@@ -82,6 +83,8 @@ comming soon.
 ## Full Example
 comming soon.
 
+## Feedback
+You can send your feedbacks on https://github.com/kiarsy/DemnehLog also you can help us to improve demnehLog. 
 
 [npm-image]: https://img.shields.io/npm/v/demnehlog.svg
 [npm-url]: https://www.npmjs.com/package/demnehlog
