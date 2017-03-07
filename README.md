@@ -30,13 +30,13 @@ Here is an example on how to use it:
 var DemnehLog = require('demnehlog');
 var consoleProvider = new DemnehLog.ProviderConsole();
 
-var testlogger = new DemnehLog.Logger([consoleProvider], ['date,title,text']);
+var logger1 = new DemnehLog.Logger([consoleProvider], ['date,title,text']);
 
-logger.info('tag', 'this is an info log');
-logger.error('tag', 'this is an error');
-logger.fatal('tag', 'this is a fatal error');
-logger.debug('tag', 'this is a debug log');
-logger.warning('tag', 'this is a warning');
+logger1.info('tag', 'this is an info log');
+logger1.error('tag', 'this is an error');
+logger1.fatal('tag', 'this is a fatal error');
+logger1.debug('tag', 'this is a debug log');
+logger1.warning('tag', 'this is a warning');
 ```
 
 `Logger` class used to make an object of logger with one or multiple providers.
@@ -55,7 +55,7 @@ demnehlog has 2 parts as describe below:
 
 * `Logger`: instance of Logger is a compination or diffrent providers you choose and the log format that the provider must provide.For instance in above example : 
 ```js
-var testlogger = new DemnehLog.Logger([consoleProvider], ['date,title,text']);
+var logger2 = new DemnehLog.Logger([consoleProvider], ['date,title,text']);
 ```
 we set consoleProvider with data,title,text format, the date means when log occours and title meanse which type of message occours (Info,Error,fatal,Debug,warning) and the text means whats happend?.<br/>
 as you can see in the output picture of example1 the logs in like :
