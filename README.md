@@ -12,6 +12,7 @@
 - [ProviderMongo](#providermongo)
 - [ProviderTelnet](#providertelnet)
 - [Full Example](#full-example)
+- [Whats Next](#whats-next)
 - [Feedback](#feedback)
 
 ## Install
@@ -75,17 +76,21 @@ var logger2 = new DemnehLog.Logger([consoleProvider], ['title,text']);
 ![alt tag](https://raw.githubusercontent.com/kiarsy/MainLogger/master/example_output2.png)
 
 in this `logger1` as you see , logs show without date
+
 ## ProviderConsole
-comming soon.
+Comming soon.
 
 ## ProviderMongo
-comming soon.
+Comming soon.
 
 ## ProviderTelnet
-comming soon.
+Comming soon.
 
 ## Full Example
-comming soon.
+Comming soon.
+
+## Whats Next
+We are going to improve `ProviderTelnet` to be more customizable.
 
 ## Feedback
 You can send your feedbacks on https://github.com/kiarsy/DemnehLog also you can join to project for helping improve demnehLog together. 
