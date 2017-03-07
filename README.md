@@ -88,7 +88,7 @@ comming soon.
 comming soon.
 
 ## Feedback
-You can send your feedbacks on https://github.com/kiarsy/DemnehLog also you can join to project to help us to improve demnehLog . 
+You can send your feedbacks on https://github.com/kiarsy/DemnehLog also you can join to project for helping improve demnehLog together. 
 
 [npm-image]: https://img.shields.io/npm/v/demnehlog.svg
 [npm-url]: https://www.npmjs.com/package/demnehlog
