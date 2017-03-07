@@ -67,10 +67,14 @@ as you can see in the output picture of example1 the logs in like :
 DATE----            TITLE---        TEXT---
 ```
 
+you can set any combination you want as provider format , for example : 
 ```js
-var testlogger = new DemnehLog.Logger([consoleProvider], ['title,text']);
+var logger2 = new DemnehLog.Logger([consoleProvider], ['title,text']);
 ```
+
 ![alt tag](https://raw.githubusercontent.com/kiarsy/MainLogger/master/example_output2.png)
+
+in this `logger1` as you see , logs show without date
 ## ProviderConsole
 comming soon.
 
