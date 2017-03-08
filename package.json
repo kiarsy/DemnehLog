@@ -1,7 +1,7 @@
 {
   "name": "demnehlog",
-  "version": "0.0.8",
-  "description": "a log framework, with mongoDb,colored console log,telnet client",
+  "version": "0.0.9",
+  "description": "A Log Framework, colored console log,telnet client,Mongo Provider for store logs",
   "main": "Logger.js",
   "scripts": {
     "test": "test"
@@ -18,9 +18,14 @@
     "colored console log",
     "telnet",
     "Client",
-    "telnet",
+    "remote",
     "log",
-    "telnet"
+    "telnet",
+    "main",
+    "console.log",
+    "console",
+    "maintence",
+    "framework"
   ],
   "author": "Hosein Kiarsy Pour",
   "license": " MS-PL"
